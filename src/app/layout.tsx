@@ -10,7 +10,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "GlowScan AI — Professional Facial Assessment",
+  title: "FaceMax AI — Professional Facial Assessment",
   description: "Get structured facial symmetry, skin analysis, and personalized style recommendations using advanced AI.",
 };
 
@@ -26,10 +26,12 @@ export default async function RootLayout({
     <html lang="en" className={`${outfit.variable}`}>
       <body className="antialiased min-h-screen flex flex-col bg-zinc-950 text-zinc-50 font-sans">
         
-        {/* Glow backgrounds */}
-        <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-          <div className="absolute top-[-10%] left-[5%] w-[450px] height-[450px] bg-indigo-500/5 rounded-full blur-[80px]" />
-          <div className="absolute bottom-[10%] right-[5%] w-[450px] height-[450px] bg-purple-500/5 rounded-full blur-[80px]" />
+        {/* Niche Face Scanner Coordinate Background */}
+        <div className="niche-grid-bg">
+          <div className="scan-coordinate-marker marker-tl" />
+          <div className="scan-coordinate-marker marker-tr" />
+          <div className="scan-coordinate-marker marker-bl" />
+          <div className="scan-coordinate-marker marker-br" />
         </div>
 
         {/* Global Navigation Header */}
@@ -42,7 +44,7 @@ export default async function RootLayout({
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
-                <span className="bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">GlowScan AI</span>
+                <span className="bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">FaceMax AI</span>
               </Link>
 
               <nav className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-zinc-400">
@@ -85,7 +87,7 @@ export default async function RootLayout({
 
         <footer className="w-full border-t border-white/5 bg-zinc-950/40 py-6 text-center text-xs text-zinc-500 no-print">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div>© 2026 GlowScan AI. All rights reserved. Privacy-first, secure memory diagnostics.</div>
+            <div>© 2026 FaceMax AI. All rights reserved. Privacy-first, secure memory diagnostics.</div>
             <div className="flex gap-4">
               <Link href="/privacy-policy" className="hover:text-zinc-300 transition-colors">Privacy Policy</Link>
               <Link href="/terms-of-service" className="hover:text-zinc-300 transition-colors">Terms of Service</Link>

@@ -1,4 +1,4 @@
--- GLOWSCAN AI SUPABASE SCHEMA SETUP (TRANSACTIONAL PAY-PER-REPORT)
+-- FACEMAX AI SUPABASE SCHEMA SETUP (TRANSACTIONAL PAY-PER-REPORT)
 -- Copy and run these queries in your Supabase SQL Editor.
 
 -- 1. Create 'users' table linking to auth.users

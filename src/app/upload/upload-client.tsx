@@ -180,7 +180,7 @@ export default function UploadClient({ user }: UploadClientProps) {
         key: keyId,
         amount: amount,
         currency: "INR",
-        name: "GlowScan AI",
+        name: "FaceMax AI",
         description: `${assessmentType} Facial Assessment`,
         order_id: orderId,
         handler: async function (response: any) {

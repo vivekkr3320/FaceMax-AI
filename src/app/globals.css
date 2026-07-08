@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #09090b;
+  --background: #030303;
   --foreground: #fafafa;
-  --card-bg: rgba(20, 20, 23, 0.6);
-  --card-hover: rgba(32, 32, 38, 0.85);
-  --border-color: rgba(255, 255, 255, 0.08);
+  --card-bg: rgba(12, 12, 14, 0.7);
+  --card-hover: rgba(22, 22, 26, 0.9);
+  --border-color: rgba(255, 255, 255, 0.05);
   --accent-primary: #6366f1;
   --accent-secondary: #a855f7;
   --accent-success: #10b981;
@@ -20,6 +20,38 @@ body {
   font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
 }
+
+/* Niche-themed background */
+.niche-grid-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -10;
+  overflow: hidden;
+  background-color: #030303;
+  /* Premium radial colors + face scan coordinate grid lines */
+  background-image: 
+    radial-gradient(circle at 50% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 10% 50%, rgba(168, 85, 247, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.03) 0%, transparent 40%),
+    linear-gradient(to right, rgba(99, 102, 241, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* Face scan crosshair coordinate markers */
+.scan-coordinate-marker {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: rgba(99, 102, 241, 0.25);
+  border-style: solid;
+}
+.marker-tl { top: 40px; left: 40px; border-width: 1.5px 0 0 1.5px; }
+.marker-tr { top: 40px; right: 40px; border-width: 1.5px 1.5px 0 0; }
+.marker-bl { bottom: 40px; left: 40px; border-width: 0 0 1.5px 1.5px; }
+.marker-br { bottom: 40px; right: 40px; border-width: 0 1.5px 1.5px 0; }
+
 
 /* Glassmorphism Premium layout utility classes */
 .glass-card {

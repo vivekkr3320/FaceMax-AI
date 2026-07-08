@@ -18,11 +18,11 @@ export default async function LandingPage() {
           </span>
 
           <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-none mb-6 bg-gradient-to-r from-white via-zinc-200 to-indigo-500 bg-clip-text text-transparent">
-            Discover Your Unique Style Blueprint
+            FaceMax AI — Discover Your Aesthetic Blueprint
           </h1>
 
           <p className="text-zinc-400 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-            Upload a single selfie. Receive a comprehensive face golden-ratio report, physical parameter analysis, and personalized evidence-based recommendations.
+            Upload a single selfie. Receive a comprehensive face structure report, physical symmetry parameters, skin health metrics, and personalized care routines.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
@@ -53,7 +53,7 @@ export default async function LandingPage() {
             </div>
             <h3 className="text-lg font-bold text-white mb-3">Facial Symmetry</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Measures lateral eye alignment, horizontal thirds ratio, nose and lip symmetry to compute structural geometry.
+              Measures lateral eye alignment, horizontal thirds ratio, nose alignment, and lip planes to compute structural geometry.
             </p>
           </div>
 
@@ -63,7 +63,7 @@ export default async function LandingPage() {
             </div>
             <h3 className="text-lg font-bold text-white mb-3">Skin Profile</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Identifies skin texture properties, tone values, hydration levels, congestion, and glow outputs.
+              Identifies skin texture properties, tone values, hydration levels, congestion, spots, redness, and glow outputs.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default async function LandingPage() {
             </div>
             <h3 className="text-lg font-bold text-white mb-3">Feature Analysis</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Deep assessment of eyebrows shape, eye puffiness, nasal proportion, jaw contours, and cheekbone definition.
+              Deep assessment of eyebrows shape, eye dark circles, nasal proportion, jaw contours, and cheekbone definition.
             </p>
           </div>
 
@@ -83,59 +83,65 @@ export default async function LandingPage() {
       {/* Pricing Tiers */}
       <section className="py-16 border-t border-white/5 max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center tracking-tight mb-3 text-white">
-          Scan Membership Packages
+          Personalized Facial Assessment Reports
         </h2>
         <p className="text-center text-zinc-400 mb-12">
-          Select the perfect access level. Upgrade anytime with a single tap.
+          Select the perfect format for your needs. Pay-per-report with 0 subscription overhead.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           
-          {/* Basic Tier */}
-          <div className="glass-card rounded-2xl p-8 border border-indigo-500/20 shadow-md shadow-indigo-500/5 flex flex-col justify-between relative">
+          {/* Quick Assessment */}
+          <div className="glass-card rounded-2xl p-8 border border-white/5 shadow-md flex flex-col justify-between relative">
             <div>
               <span className="inline-block px-3 py-1 bg-indigo-500/10 text-indigo-400 text-2xs font-bold rounded-full uppercase tracking-wider mb-4">
-                Basic Plan
+                ₹49 package
               </span>
-              <h3 className="text-xl font-extrabold text-white mb-2">Plus Scanner</h3>
+              <h3 className="text-xl font-extrabold text-white mb-2">Quick Facial Assessment</h3>
               <div className="text-4xl font-black text-white mb-6">
-                ₹49<span className="text-xs text-zinc-400 font-medium">/ package</span>
+                ₹49<span className="text-xs text-zinc-400 font-medium">/ report</span>
               </div>
               <ul className="space-y-3 text-sm text-zinc-400 mb-8">
-                <li>✓ 5 Full Face Scans</li>
-                <li>✓ Golden-Ratio Symmetry report</li>
-                <li>✓ Actionable corrective suggestions</li>
+                <li>✓ Overall Face Health Score</li>
+                <li>✓ Face Shape mapping</li>
+                <li>✓ Skin parameters (Acne, red, spots)</li>
+                <li>✓ Feature symmetry & balance scores</li>
                 <li>✓ Morning & Night daily care routine</li>
-                <li>✓ Privacy-first temporary processing</li>
                 <li className="line-through opacity-45">✗ 30-Day step plan timeline</li>
+                <li className="line-through opacity-45">✗ PDF report download option</li>
               </ul>
             </div>
             <Link href="/pricing" className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl text-center transition-all shadow-md shadow-indigo-600/10 cursor-pointer">
-              Upgrade Now
+              Get Quick Plan
             </Link>
           </div>
 
-          {/* Premium Tier */}
-          <div className="glass-card rounded-2xl p-8 border border-purple-500/20 shadow-md shadow-purple-500/5 flex flex-col justify-between">
+          {/* Complete Assessment */}
+          <div className="glass-card rounded-2xl p-8 border border-purple-500/20 shadow-md flex flex-col justify-between relative">
+            <span className="absolute top-[-10px] right-6 px-2.5 py-0.5 bg-purple-600 text-white text-4xs font-black rounded-full uppercase tracking-widest">
+              Most Popular
+            </span>
             <div>
               <span className="inline-block px-3 py-1 bg-purple-500/10 text-purple-400 text-2xs font-bold rounded-full uppercase tracking-wider mb-4">
-                Premium Plan
+                ₹99 package
               </span>
-              <h3 className="text-xl font-extrabold text-white mb-2">Ultimate Pro</h3>
+              <h3 className="text-xl font-extrabold text-white mb-2">Complete Facial Assessment</h3>
               <div className="text-4xl font-black text-white mb-6">
-                ₹99<span className="text-xs text-zinc-400 font-medium">/ package</span>
+                ₹99<span className="text-xs text-zinc-400 font-medium">/ report</span>
               </div>
               <ul className="space-y-3 text-sm text-zinc-400 mb-8">
-                <li>✓ Unlimited AI Face Scans</li>
-                <li>✓ Golden-Ratio Symmetry report</li>
-                <li>✓ Actionable corrective suggestions</li>
+                <li>✓ Overall Face Health Score</li>
+                <li>✓ Face Shape mapping</li>
+                <li>✓ Skin parameters (Acne, red, spots)</li>
+                <li>✓ Feature symmetry & balance scores</li>
                 <li>✓ Morning & Night daily care routine</li>
-                <li>✓ 30-Day step plan timeline</li>
-                <li>✓ PDF report downloads</li>
+                <li>✓ <strong>30-Day step plan timeline</strong></li>
+                <li>✓ <strong>High-quality PDF report download</strong></li>
+                <li>✓ <strong>Progress baseline curve tracking</strong></li>
               </ul>
             </div>
             <Link href="/pricing" className="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-sm font-semibold rounded-xl text-center transition-all shadow-md shadow-purple-600/10 cursor-pointer">
-              Upgrade Now
+              Get Complete Plan
             </Link>
           </div>
 

@@ -73,7 +73,7 @@ export default function ReportClient({ analysisId, createdAt, report, assessment
         heightLeft -= pageHeight;
       }
 
-      pdf.save(`GlowScan_AI_Analysis_${analysisId.substring(0, 8)}.pdf`);
+      pdf.save(`FaceMax_AI_Analysis_${analysisId.substring(0, 8)}.pdf`);
     } catch (e) {
       console.error(e);
       alert("An error occurred compiling PDF. Please use Ctrl + P to print natively.");
@@ -165,7 +165,7 @@ export default function ReportClient({ analysisId, createdAt, report, assessment
         
         {/* Logo print display (Visible in PDF but hidden in UI) */}
         <div className="hidden print:block mb-8 border-b border-zinc-800 pb-4">
-          <div className="text-2xl font-black text-white">GlowScan AI Diagnostics</div>
+          <div className="text-2xl font-black text-white">FaceMax AI Diagnostics</div>
           <span className="text-xs text-zinc-400">Professional Face Structure & Skin Health Report</span>
         </div>
 

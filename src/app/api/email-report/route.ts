@@ -76,14 +76,14 @@ export async function POST(request: Request) {
       <html>
       <head>
         <meta charset="utf-8">
-        <title>GlowScan AI face analysis report</title>
+        <title>FaceMax AI face analysis report</title>
       </head>
       <body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f4f4f7; color: #333333; margin: 0; padding: 40px 20px;">
         <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; border: 1px solid #e8e8e8;">
           <!-- Header Banner -->
           <tr>
             <td style="background-color: #0b0b0f; padding: 40px 30px; text-align: center; border-bottom: 3px solid #6366f1;">
-              <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.5px;">GlowScan AI</h1>
+              <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.5px;">FaceMax AI</h1>
               <p style="color: #9ca3af; margin: 5px 0 0 0; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Facial Health & Diagnostics</p>
             </td>
           </tr>
@@ -192,7 +192,7 @@ export async function POST(request: Request) {
           <tr>
             <td style="background-color: #f9fafb; padding: 24px 30px; text-align: center; border-top: 1px solid #eeeeee; font-size: 11px; color: #777777;">
               <p style="margin: 0 0 8px 0; font-style: italic;">Disclaimer: This AI face analysis does not constitute medical diagnosis or professional dermatological assessment.</p>
-              <p style="margin: 0;">© 2026 GlowScan AI. Privacy-first secure memory diagnostics.</p>
+              <p style="margin: 0;">© 2026 FaceMax AI. Privacy-first secure memory diagnostics.</p>
             </td>
           </tr>
         </table>
@@ -212,9 +212,9 @@ export async function POST(request: Request) {
             Authorization: `Bearer ${resendApiKey}`,
           },
           body: JSON.stringify({
-            from: "GlowScan AI Reports <reports@glowscan.ai>",
+            from: "FaceMax AI Reports <reports@glowscan.ai>",
             to: [targetEmail],
-            subject: `Your GlowScan AI Facial Assessment Report - ${analysisId.substring(0, 8)}`,
+            subject: `Your FaceMax AI Facial Assessment Report - ${analysisId.substring(0, 8)}`,
             html: htmlEmailTemplate,
           }),
         });
@@ -233,7 +233,7 @@ export async function POST(request: Request) {
       console.log("==================================================");
       console.log(`✉️ RESEND API KEY NOT CONFIGURED. MOCK EMAIL LOGGED BELOW:`);
       console.log(`TO: ${targetEmail}`);
-      console.log(`SUBJECT: GlowScan AI facial health analysis report - ${analysisId.substring(0, 8)}`);
+      console.log(`SUBJECT: FaceMax AI facial health analysis report - ${analysisId.substring(0, 8)}`);
       console.log("==================================================");
       console.log(htmlEmailTemplate);
       console.log("==================================================");
