@@ -6,43 +6,192 @@ export default async function LandingPage() {
   const { data: { user } } = await supabase.auth.getUser();
 
   return (
-    <div className="pb-20">
+    <div className="pb-20 space-y-20 fade-in">
       
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 text-center overflow-hidden">
-        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-80 h-80 bg-indigo-500/10 rounded-full blur-[50px] -z-10 pointer-events-none" />
+      {/* Hero Section Grid */}
+      <section className="grid grid-cols-12 gap-8 items-center pt-8 md:pt-16 px-4">
+        
+        {/* Left Column Copy and Actions */}
+        <div className="col-span-12 lg:col-span-7 text-left space-y-6">
+          
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold rounded-full uppercase tracking-wider">
+            <span className="animate-pulse">✨</span> AI-powered facial assessment
+          </div>
 
-        <div className="max-w-3xl mx-auto flex flex-col items-center">
-          <span className="text-xs font-black tracking-widest text-indigo-400 bg-indigo-500/10 px-4 py-1.5 rounded-full border border-indigo-500/20 uppercase mb-8 animate-pulse">
-            Gemini 2.5 Flash Powered
-          </span>
-
-          <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-none mb-6 bg-gradient-to-r from-white via-zinc-200 to-indigo-500 bg-clip-text text-transparent">
-            FaceMax AI — Discover Your Aesthetic Blueprint
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight text-white max-w-xl">
+            Know Your Face.<br />
+            Improve with <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">Confidence.</span>
           </h1>
 
-          <p className="text-zinc-400 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-            Upload a single selfie. Receive a comprehensive face structure report, physical symmetry parameters, skin health metrics, and personalized care routines.
+          <p className="text-zinc-400 text-base md:text-lg max-w-xl leading-relaxed">
+            Get a detailed AI facial assessment with skin analysis, symmetry mapping, and personalized recommendations to help you become the best version of yourself.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
-            <Link href={user ? "/upload" : "/register"} className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/25 transition-all transform hover:-translate-y-0.5 text-center cursor-pointer">
-              Get Started
+          {/* Action CTAs */}
+          <div className="flex flex-wrap gap-4 items-center pt-2">
+            <Link 
+              href={user ? "/upload" : "/register"} 
+              className="px-6 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/25 transition-all transform hover:-translate-y-0.5 text-center flex items-center gap-2 cursor-pointer text-sm"
+            >
+              Start Your Assessment
+              <span className="text-base">→</span>
             </Link>
-            <Link href="#features" className="px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 font-semibold rounded-xl border border-white/5 transition-all text-center">
-              Explore Features
-            </Link>
+            
+            <a 
+              href="#features" 
+              className="px-6 py-3.5 bg-zinc-950/40 hover:bg-zinc-900/60 text-zinc-350 hover:text-white font-semibold rounded-xl border border-white/5 transition-all flex items-center gap-2 text-sm cursor-pointer"
+            >
+              {/* SVG Play Icon */}
+              <svg className="w-5 h-5 text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+              </svg>
+              How It Works
+            </a>
           </div>
+
+          {/* Trust points */}
+          <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 text-xs font-semibold text-zinc-400">
+            <div className="flex items-center gap-1.5">
+              <span className="text-indigo-400 text-sm">✓</span>
+              <span>100% Privacy First</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="text-indigo-400 text-sm">⚡</span>
+              <span>Instant Results</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="text-indigo-400 text-sm">🔒</span>
+              <span>Secure & Encrypted</span>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Right Column Portrait & Widgets */}
+        <div className="col-span-12 lg:col-span-5 relative flex items-center justify-center pt-8 lg:pt-0">
+          
+          {/* Main Portrait Frame with Face Grid Overlay */}
+          <div className="relative w-full max-w-[380px] aspect-[4/5] rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <img 
+              src="/hero-portrait.png" 
+              alt="FaceMax AI Model Scan" 
+              className="w-full h-full object-cover" 
+            />
+            {/* Holographic scanner layout overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#030303]/90 via-transparent to-[#030303]/20" />
+            <div className="scan-line opacity-20" />
+          </div>
+
+          {/* Widget 1: Overall Score (Floating Left) */}
+          <div className="absolute bottom-[20%] left-[-20px] md:left-[-40px] glass-card rounded-2xl p-4 border border-white/5 shadow-2xl flex flex-col items-center justify-center w-28 md:w-32 py-5 z-10">
+            <span className="text-[9px] text-zinc-450 uppercase tracking-widest font-black mb-2">Overall Score</span>
+            <div className="relative w-16 h-16 rounded-full flex items-center justify-center" style={{ background: "conic-gradient(#6366f1 84%, rgba(255,255,255,0.05) 0)" }}>
+              <div className="w-[52px] h-[52px] rounded-full bg-zinc-950 flex flex-col items-center justify-center">
+                <strong className="text-white text-lg font-black leading-none">84</strong>
+                <span className="text-[8px] text-zinc-550 mt-0.5">/100</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Floating Right Score metrics widgets */}
+          <div className="absolute right-[-20px] md:right-[-40px] top-[10%] space-y-4 w-40 md:w-44 z-10">
+            
+            {/* Skin Health */}
+            <div className="glass-card rounded-xl p-3 border border-white/5 shadow-2xl flex flex-col gap-1.5 bg-zinc-950/75 backdrop-blur-md">
+              <div className="flex items-center gap-1.5">
+                <span className="text-indigo-400 text-xs">🛡️</span>
+                <span className="text-[10px] text-zinc-400 font-bold tracking-wider">Skin Health</span>
+              </div>
+              <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                <div className="bg-indigo-500 h-full rounded-full" style={{ width: "82%" }} />
+              </div>
+              <div className="text-right text-[10px] text-zinc-400 font-mono"><strong>82</strong>/100</div>
+            </div>
+
+            {/* Symmetry */}
+            <div className="glass-card rounded-xl p-3 border border-white/5 shadow-2xl flex flex-col gap-1.5 bg-zinc-950/75 backdrop-blur-md">
+              <div className="flex items-center gap-1.5">
+                <span className="text-indigo-400 text-xs">📐</span>
+                <span className="text-[10px] text-zinc-400 font-bold tracking-wider">Symmetry</span>
+              </div>
+              <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                <div className="bg-indigo-500 h-full rounded-full" style={{ width: "78%" }} />
+              </div>
+              <div className="text-right text-[10px] text-zinc-400 font-mono"><strong>78</strong>/100</div>
+            </div>
+
+            {/* Jawline */}
+            <div className="glass-card rounded-xl p-3 border border-white/5 shadow-2xl flex flex-col gap-1.5 bg-zinc-950/75 backdrop-blur-md">
+              <div className="flex items-center gap-1.5">
+                <span className="text-indigo-400 text-xs">😊</span>
+                <span className="text-[10px] text-zinc-400 font-bold tracking-wider">Jawline</span>
+              </div>
+              <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                <div className="bg-indigo-500 h-full rounded-full" style={{ width: "85%" }} />
+              </div>
+              <div className="text-right text-[10px] text-zinc-400 font-mono"><strong>85</strong>/100</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* Bottom Niche Feature Bar matching mockup exactly */}
+      <section className="glass-card rounded-2xl p-6 border border-white/5 shadow-xl max-w-6xl mx-auto px-4 sm:px-8 bg-zinc-950/60 backdrop-blur-md">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-left">
+          
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="text-lg text-indigo-400">🔍</span>
+              <h4 className="text-xs font-bold text-white tracking-wider">Face Shape</h4>
+            </div>
+            <p className="text-[10px] text-zinc-450 pl-7">7 types detected</p>
+          </div>
+
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="text-lg text-indigo-400">✨</span>
+              <h4 className="text-xs font-bold text-white tracking-wider">Skin Analysis</h4>
+            </div>
+            <p className="text-[10px] text-zinc-450 pl-7">10+ skin metrics</p>
+          </div>
+
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="text-lg text-indigo-400">📐</span>
+              <h4 className="text-xs font-bold text-white tracking-wider">Symmetry Mapping</h4>
+            </div>
+            <p className="text-[10px] text-zinc-450 pl-7">Precision analysis</p>
+          </div>
+
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="text-lg text-indigo-400">🎯</span>
+              <h4 className="text-xs font-bold text-white tracking-wider">11+ Parameters</h4>
+            </div>
+            <p className="text-[10px] text-zinc-450 pl-7">Detailed evaluation</p>
+          </div>
+
+          <div className="col-span-2 md:col-span-1 space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="text-lg text-indigo-400">📋</span>
+              <h4 className="text-xs font-bold text-white tracking-wider">Personalized Plan</h4>
+            </div>
+            <p className="text-[10px] text-zinc-450 pl-7">Daily + 30 day plan</p>
+          </div>
+
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section id="features" className="py-16 max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center tracking-tight mb-3 text-white">
+      {/* Aesthetic Diagnostics Features info block */}
+      <section id="features" className="py-8 max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-extrabold text-center tracking-tight mb-3 text-white">
           Aesthetic Diagnostics Engine
         </h2>
-        <p className="text-center text-zinc-400 max-w-lg mx-auto mb-12">
-          Facial structure mapping, skin profiles, and physical parameter analysis.
+        <p className="text-center text-zinc-400 max-w-lg mx-auto mb-12 text-sm leading-relaxed">
+          Facial structure mapping, skin health parameters, and evidence-based suggestions.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -81,11 +230,11 @@ export default async function LandingPage() {
       </section>
 
       {/* Pricing Tiers */}
-      <section className="py-16 border-t border-white/5 max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center tracking-tight mb-3 text-white">
+      <section className="py-8 border-t border-white/5 max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-extrabold text-center tracking-tight mb-3 text-white">
           Personalized Facial Assessment Reports
         </h2>
-        <p className="text-center text-zinc-400 mb-12">
+        <p className="text-center text-zinc-400 mb-12 text-sm leading-relaxed">
           Select the perfect format for your needs. Pay-per-report with 0 subscription overhead.
         </p>
 
@@ -129,7 +278,7 @@ export default async function LandingPage() {
               <div className="text-4xl font-black text-white mb-6">
                 ₹99<span className="text-xs text-zinc-400 font-medium">/ report</span>
               </div>
-              <ul className="space-y-3 text-sm text-zinc-400 mb-8">
+              <ul className="space-y-3 text-sm text-zinc-450 mb-8">
                 <li>✓ Overall Face Health Score</li>
                 <li>✓ Face Shape mapping</li>
                 <li>✓ Skin parameters (Acne, red, spots)</li>
