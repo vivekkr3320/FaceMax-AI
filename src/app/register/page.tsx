@@ -19,6 +19,8 @@ export default async function RegisterPage(props: {
       redirect("/register?error=Email and password are required.");
     }
 
+    let redirectPath = "";
+
     try {
       const { data, error: signUpError } = await supabase.auth.signUp({
         email,
@@ -29,10 +31,8 @@ export default async function RegisterPage(props: {
       });
 
       if (signUpError) {
-        redirect(`/register?error=${encodeURIComponent(signUpError.message)}`);
-      }
-
-      if (data?.user) {
+        redirectPath = `/register?error=${encodeURIComponent(signUpError.message)}`;
+      } else if (data?.user) {
         // Guarantee user profile row exists in the postgres 'users' table
         await supabase.from("users").insert({
           id: data.user.id,
@@ -40,13 +40,16 @@ export default async function RegisterPage(props: {
           name,
           plan: "FREE",
         });
+        redirectPath = "/dashboard";
       }
     } catch (e: any) {
       console.error(e);
-      redirect("/register?error=An unexpected error occurred during signup.");
+      redirectPath = "/register?error=An unexpected error occurred during signup.";
     }
 
-    redirect("/dashboard");
+    if (redirectPath) {
+      redirect(redirectPath);
+    }
   }
 
   return (

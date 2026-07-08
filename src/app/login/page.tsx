@@ -18,6 +18,8 @@ export default async function LoginPage(props: {
       redirect("/login?error=Email and password are required.");
     }
 
+    let redirectPath = "";
+
     try {
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
         email,
@@ -25,14 +27,18 @@ export default async function LoginPage(props: {
       });
 
       if (signInError) {
-        redirect(`/login?error=${encodeURIComponent(signInError.message)}`);
+        redirectPath = `/login?error=${encodeURIComponent(signInError.message)}`;
+      } else {
+        redirectPath = "/dashboard";
       }
     } catch (e: any) {
       console.error(e);
-      redirect("/login?error=An unexpected error occurred during login.");
+      redirectPath = "/login?error=An unexpected error occurred during login.";
     }
 
-    redirect("/dashboard");
+    if (redirectPath) {
+      redirect(redirectPath);
+    }
   }
 
   return (
