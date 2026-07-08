@@ -24,10 +24,21 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className={`${outfit.variable}`}>
-      <body className="antialiased min-h-screen flex flex-col bg-[#030303] text-zinc-550 font-sans">
+      <body className="antialiased min-h-screen flex flex-col bg-[#020204] text-zinc-350 font-sans">
         
         {/* Niche Face Scanner Coordinate Background */}
         <div className="niche-grid-bg">
+          {/* Drifting Glow Blobs */}
+          <div className="glow-blob blob-1" />
+          <div className="glow-blob blob-2" />
+          <div className="glow-blob blob-3" />
+          
+          {/* Rotating HUD Radar Circles */}
+          <div className="hud-circle hud-c1" />
+          <div className="hud-circle hud-c2" />
+          <div className="hud-circle hud-c3" />
+
+          {/* Coordinate Scan Markers */}
           <div className="scan-coordinate-marker marker-tl" />
           <div className="scan-coordinate-marker marker-tr" />
           <div className="scan-coordinate-marker marker-bl" />
@@ -35,7 +46,7 @@ export default async function RootLayout({
         </div>
 
         {/* Global Navigation Header */}
-        <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-[#030303]/60 border-b border-white/5 no-print">
+        <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-[#020204]/60 border-b border-white/5 no-print">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row items-center justify-between py-4 sm:h-20 gap-4">
               
