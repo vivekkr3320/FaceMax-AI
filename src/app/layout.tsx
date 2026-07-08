@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import NavbarLinks from "@/components/navbar-links";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -64,15 +65,7 @@ export default async function RootLayout({
               </Link>
 
               {/* Navigation links matching mockup layout */}
-              <nav className="flex items-center gap-8 text-sm font-semibold text-[#C5CAD6]">
-                <Link href="/" className="text-white relative py-1 hover:text-white transition-colors">
-                  Home
-                  <span className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-[#6D5EF8] rounded-full" />
-                </Link>
-                <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
-                <Link href="/#features" className="hover:text-white transition-colors">How It Works</Link>
-                <Link href="/privacy-policy" className="hover:text-white transition-colors">About</Link>
-              </nav>
+              <NavbarLinks />
 
               {/* Navigation Action CTA buttons */}
               <div className="flex items-center gap-4">

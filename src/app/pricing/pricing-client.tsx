@@ -37,7 +37,7 @@ export default function PricingClient({ user }: PricingClientProps) {
         <div className="glass-card rounded-2xl p-8 flex flex-col justify-between border border-white/5 bg-[#111216]/60">
           <div>
             <div className="mb-4">
-              <span className="inline-block px-3 py-1 bg-[#6D5EF8]/10 text-[#8A7CFF] text-2xs font-bold rounded-full uppercase tracking-wider border border-[#6D5EF8]/20">
+              <span className="inline-block px-3 py-1 bg-[#6D5EF8] text-white text-2xs font-extrabold rounded-full uppercase tracking-wider">
                 ₹49 package
               </span>
             </div>
@@ -96,7 +96,7 @@ export default function PricingClient({ user }: PricingClientProps) {
           </span>
           <div>
             <div className="mb-4">
-              <span className="inline-block px-3 py-1 bg-[#6D5EF8]/10 text-[#8A7CFF] text-2xs font-bold rounded-full uppercase tracking-wider border border-[#6D5EF8]/20">
+              <span className="inline-block px-3 py-1 bg-[#6D5EF8] text-white text-2xs font-extrabold rounded-full uppercase tracking-wider">
                 ₹99 package
               </span>
             </div>

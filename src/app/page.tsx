@@ -189,7 +189,7 @@ export default async function LandingPage() {
       </section>
 
       {/* Aesthetic Diagnostics Features info block */}
-      <section id="features" className="py-8 max-w-6xl mx-auto px-4">
+      <section id="features" className="py-8 max-w-6xl mx-auto px-4 scroll-mt-24">
         <h2 className="text-3xl font-extrabold text-center tracking-tight mb-3 text-white">
           Aesthetic <span className="bg-gradient-to-r from-[#FFFFFF] via-[#CFCBFF] to-[#8A7CFF] bg-clip-text text-transparent">Diagnostics Engine</span>
         </h2>
@@ -246,7 +246,7 @@ export default async function LandingPage() {
           {/* Quick Assessment */}
           <div className="glass-card rounded-2xl p-8 border border-white/5 shadow-md flex flex-col justify-between relative">
             <div>
-              <span className="inline-block px-3 py-1 bg-[#6D5EF8]/10 text-[#8A7CFF] text-2xs font-bold rounded-full uppercase tracking-wider mb-4 border border-[#6D5EF8]/20">
+              <span className="inline-block px-3 py-1 bg-[#6D5EF8] text-white text-2xs font-extrabold rounded-full uppercase tracking-wider mb-4">
                 ₹49 package
               </span>
               <h3 className="text-xl font-extrabold text-white mb-2">Quick Facial Assessment</h3>
@@ -274,7 +274,7 @@ export default async function LandingPage() {
               Most Popular
             </span>
             <div>
-              <span className="inline-block px-3 py-1 bg-[#6D5EF8]/10 text-[#8A7CFF] text-2xs font-bold rounded-full uppercase tracking-wider mb-4 border border-[#6D5EF8]/20">
+              <span className="inline-block px-3 py-1 bg-[#6D5EF8] text-white text-2xs font-extrabold rounded-full uppercase tracking-wider mb-4">
                 ₹99 package
               </span>
               <h3 className="text-xl font-extrabold text-white mb-2">Complete Facial Assessment</h3>
