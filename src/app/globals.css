@@ -1,19 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #060614;
-  --foreground: #fafafa;
-  --card-bg: rgba(12, 12, 24, 0.55);
-  --card-hover: rgba(18, 18, 36, 0.75);
-  --border-color: rgba(99, 102, 241, 0.08);
-  --border-hover: rgba(99, 102, 241, 0.25);
-  --accent-primary: #6366f1;
-  --accent-secondary: #a855f7;
-  --accent-cyan: #06b6d4;
-  --accent-success: #10b981;
+  --background: #09090B;
+  --foreground: #FFFFFF;
+  --card-bg: #111216;
+  --card-hover: #16171d;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.16);
+  --accent-primary: #6D5EF8;
+  --accent-secondary: #7B6DFF;
+  --accent-success: #4ADE80;
   --accent-danger: #ef4444;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
+  --text-secondary: #B6BCC8;
+  --text-muted: #7C8495;
 }
 
 body {
@@ -31,16 +30,16 @@ body {
   pointer-events: none;
   z-index: -10;
   overflow: hidden;
-  background-color: #060614;
+  background-color: #09090B;
   
   /* Dual grid overlay: fine dots + larger squares */
   background-image: 
-    radial-gradient(circle at 50% 15%, rgba(99, 102, 241, 0.2) 0%, transparent 60%),
-    radial-gradient(circle at 10% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.07) 0%, transparent 40%),
-    linear-gradient(to right, rgba(99, 102, 241, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(99, 102, 241, 0.025) 1px, transparent 1px),
-    radial-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    radial-gradient(circle at 50% 15%, rgba(109, 94, 248, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 10% 50%, rgba(109, 94, 248, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(109, 94, 248, 0.04) 0%, transparent 40%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px, 20px 20px;
 }
 
@@ -49,7 +48,7 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
-  opacity: 0.12;
+  opacity: 0.08;
   pointer-events: none;
   animation: float-glow 20s infinite ease-in-out;
 }
@@ -73,7 +72,7 @@ body {
   left: -10%;
   width: 400px;
   height: 400px;
-  background: var(--accent-cyan);
+  background: #8A7CFF;
   animation-delay: -10s;
 }
 
@@ -88,7 +87,7 @@ body {
   position: absolute;
   width: 18px;
   height: 18px;
-  border-color: rgba(99, 102, 241, 0.35);
+  border-color: rgba(109, 94, 248, 0.25);
   border-style: solid;
   transition: all 0.3s ease;
 }
@@ -103,7 +102,7 @@ body {
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px dashed rgba(99, 102, 241, 0.04);
+  border: 1px dashed rgba(109, 94, 248, 0.03);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -129,7 +128,7 @@ body {
   background: var(--card-hover);
   border-color: var(--border-hover);
   transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.12), 0 0 1px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 20px 40px rgba(109, 94, 248, 0.08), 0 0 1px rgba(109, 94, 248, 0.2);
 }
 
 /* Shimmer Skeletal Pulsers */
@@ -176,8 +175,8 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, transparent, var(--accent-primary), var(--accent-cyan), var(--accent-primary), transparent);
-  box-shadow: 0 0 20px var(--accent-primary), 0 0 5px var(--accent-cyan);
+  background: linear-gradient(90deg, transparent, var(--accent-primary), #8A7CFF, var(--accent-primary), transparent);
+  box-shadow: 0 0 20px var(--accent-primary), 0 0 5px #8A7CFF;
   animation: scan-anim 5s infinite ease-in-out;
 }
 
