@@ -13,7 +13,7 @@ export default function RefundPolicyPage() {
 
       <div className="space-y-6 text-zinc-400 text-sm leading-relaxed">
         <p>
-          Thank you for choosing GlowScan AI. Please read this policy carefully.
+          Thank you for choosing FaceMax AI. Please read this policy carefully.
         </p>
 
         <section className="space-y-3">
@@ -27,7 +27,7 @@ export default function RefundPolicyPage() {
           <h2 className="text-lg font-bold text-white uppercase tracking-wider">2. System Failures & Processing Issues</h2>
           <p>
             If your payment was processed successfully but a system failure occurred (e.g. Gemini returned an error, or the database transaction crashed), we will automatically refund the transaction or credit a new free scan.
-            If your refund is not credited within 24 hours, contact us at <strong>billing@glowscan.ai</strong>.
+            If your refund is not credited within 24 hours, contact us at <strong>billing@growthbeamai.com</strong>.
           </p>
         </section>
 

@@ -4,7 +4,7 @@ import { supabase } from "@/lib/supabase";
 import DashboardClient from "./dashboard-client";
 
 export const metadata: Metadata = {
-  title: "Console Dashboard — GlowScan AI",
+  title: "Console Dashboard — FaceMax AI",
   description: "Track your aesthetic scores, skin metrics, and chronological style improvement timeline.",
 };
 

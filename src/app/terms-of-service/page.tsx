@@ -13,13 +13,13 @@ export default function TermsOfServicePage() {
 
       <div className="space-y-6 text-zinc-400 text-sm leading-relaxed">
         <p>
-          By creating an account or purchasing any facial assessment report on GlowScan AI, you agree to these Terms of Service.
+          By creating an account or purchasing any facial assessment report on FaceMax AI, you agree to these Terms of Service.
         </p>
 
         <section className="space-y-3">
           <h2 className="text-lg font-bold text-white uppercase tracking-wider">1. Description of Service</h2>
           <p>
-            GlowScan AI provides professional facial feature analyses, skin condition estimates, and daily routines. The generated reports are based on computer vision patterns.
+            FaceMax AI provides professional facial feature analyses, skin condition estimates, and daily routines. The generated reports are based on computer vision patterns.
           </p>
         </section>
 

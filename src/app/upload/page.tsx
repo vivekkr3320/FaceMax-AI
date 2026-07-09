@@ -4,7 +4,7 @@ import { supabase } from "@/lib/supabase";
 import UploadClient from "./upload-client";
 
 export const metadata: Metadata = {
-  title: "Selfie Scan Center — GlowScan AI",
+  title: "Selfie Scan Center — FaceMax AI",
   description: "Capture a clear photo or select a file to execute your professional facial assessment.",
 };
 

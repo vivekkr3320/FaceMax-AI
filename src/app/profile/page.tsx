@@ -4,7 +4,7 @@ import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
 export const metadata: Metadata = {
-  title: "Account Profile Settings — GlowScan AI",
+  title: "Account Profile Settings — FaceMax AI",
   description: "Manage your personal profile, email settings, and active scan memberships.",
 };
 

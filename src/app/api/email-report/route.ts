@@ -212,7 +212,7 @@ export async function POST(request: Request) {
             Authorization: `Bearer ${resendApiKey}`,
           },
           body: JSON.stringify({
-            from: "FaceMax AI Reports <reports@glowscan.ai>",
+            from: "FaceMax AI Reports <reports@growthbeamai.com>",
             to: [targetEmail],
             subject: `Your FaceMax AI Facial Assessment Report - ${analysisId.substring(0, 8)}`,
             html: htmlEmailTemplate,

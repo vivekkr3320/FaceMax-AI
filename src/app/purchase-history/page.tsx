@@ -4,7 +4,7 @@ import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
 export const metadata: Metadata = {
-  title: "Invoice & Billing Logs — GlowScan AI",
+  title: "Invoice & Billing Logs — FaceMax AI",
   description: "Inspect historical invoices, scanner package purchases, and subscription payment receipts.",
 };
 

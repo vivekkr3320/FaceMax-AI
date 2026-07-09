@@ -3,7 +3,7 @@ import { supabase } from "@/lib/supabase";
 import PricingClient from "./pricing-client";
 
 export const metadata: Metadata = {
-  title: "Membership Plans — GlowScan AI",
+  title: "Assessment Plans — FaceMax AI",
   description: "Select the perfect scan package. Get access to detailed skin parameters, structural balance analysis, and daily care routines.",
 };
 

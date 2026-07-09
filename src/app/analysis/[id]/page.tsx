@@ -9,7 +9,7 @@ interface PageProps {
 }
 
 export const metadata: Metadata = {
-  title: "Diagnostics Face Scan Analysis — GlowScan AI",
+  title: "Diagnostics Face Scan Analysis — FaceMax AI",
   description: "Inspect your facial balance, skin parameters, structure harmony, and personalized corrective routines.",
 };
 

@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
 
       <div className="space-y-6 text-zinc-400 text-sm leading-relaxed">
         <p>
-          At GlowScan AI, we take your privacy extremely seriously. Because we process facial images, we enforce stricter privacy measures than typical SaaS platforms.
+          At FaceMax AI, we take your privacy extremely seriously. Because we process facial images, we enforce stricter privacy measures than typical SaaS platforms.
         </p>
 
         <section className="space-y-3">
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
         <section className="space-y-3">
           <h2 className="text-lg font-bold text-white uppercase tracking-wider">4. Contact Us</h2>
           <p>
-            For any questions or account deletion requests, please contact us at <strong>privacy@glowscan.ai</strong>.
+            For any questions or account deletion requests, please contact us at <strong>privacy@growthbeamai.com</strong>.
           </p>
         </section>
       </div>
